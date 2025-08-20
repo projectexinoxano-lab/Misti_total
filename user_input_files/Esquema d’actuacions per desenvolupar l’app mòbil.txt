@@ -1,0 +1,48 @@
+﻿Esquema d’actuacions per desenvolupar l’app mòbil
+1. Definició i planificació
+* Confirmar funcionalitats i pantalles necessàries (ex.: llista llegendes, detall llegenda, home).
+
+* Escollir tecnologia per a l’app (Capacitor + web SPA recomanat).
+
+2. Preparar el projecte
+   * Crear projecte base (React/Vue/Angular + Capacitor).
+
+   * Configurar entorn i dependències.
+
+3. Desenvolupament UI/UX
+      * Crear components i pantalles:
+
+         * Pantalla inicial
+
+         * Llista de llegendes
+
+         * Detall llegenda
+
+            * Disseny responsive i adaptació a mòbil (touch-friendly).
+
+4. Integració de dades
+               * Connectar amb Supabase per recuperar llegendes i dades.
+
+               * Gestionar consultes, càrrega i actualitzacions.
+
+5. Funcionalitats addicionals
+                  * Gestió de multimèdia (imatges, àudio).
+
+                  * Navegació interna i rutes.
+
+                  * Control d’estat i errors.
+
+6. Tests i optimització
+                     * Provar l’app a diferents dispositius i emuladors.
+
+                     * Optimitzar rendiment i usabilitat.
+
+7. Preparació per publicació
+                        * Configurar icones, splash screens i permisos.
+
+                        * Crear fitxa d’app per botigues (descripció, captures, polítiques).
+
+8. Compilació i deploy
+                           * Compilar per Android i iOS.
+
+                           * Realitzar publicació a Google Play i App Store.

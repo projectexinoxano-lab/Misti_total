@@ -1,0 +1,309 @@
+﻿Esquema del Projecte Final: Desenvolupament App MVP “Llegendes del Pallars”
+________________
+
+
+Títol i Resum Executiu
+Nom: Llegendes del Pallars – App MVP
+Resum:
+ Aplicació mòbil PWA que ofereix un mapa interactiu del Pallars amb punts mítics i llegendaris. L’usuari pot activar un recorregut i, quan s’apropa a un lloc, s’activa automàticament l’àudio narratiu de la llegenda, acompanyat de text i imatges. La gestió de continguts és senzilla i escalable via Supabase, i es preveu integració de pagaments Stripe per contingut premium. El projecte es basa en tecnologia low-code per accelerar el llançament i minimitzar costos.
+________________
+
+
+1. Anàlisi i Planificació
+1.1 Anàlisi de Mercat i Competència
+* Sector: Apps turístiques i culturals basades en rutes i storytelling local.
+
+* Competidors: Apps com SmartGuide, apps de rutes culturals locals, audioguies tradicionals.
+
+* Avantatge competitiu: Focus específic en el patrimoni intangible del Pallars, ús de tecnologies low-code per desplegament ràpid i gestió simple de continguts, i enfocament en experiència immersiva i pròxima.
+
+1.2 Públic Objectiu i Persones Usuàries
+   * Públic principal: turistes i residents del Pallars interessats en cultura, història i llegendes (20-60 anys).
+
+   * Persona 1: Turista cultural que vol descobrir la regió d’una manera interactiva i autònoma.
+
+   * Persona 2: Família o grup que busca activitats lúdiques i educatives a l’aire lliure.
+
+   * Persona 3: Responsable cultural o turístic que vol actualitzar continguts fàcilment.
+
+1.3 Pla de Projecte i Cronograma
+Fase
+	Tasques Principals
+	Durada estimada
+	Responsable
+	Anàlisi i disseny
+	Definició UX, estructura dades, wireframes
+	2 setmanes
+	Project Manager / UX
+	Desenvolupament MVP
+	Desenvolupament app + dashboard admin
+	4 setmanes
+	Desenvolupador
+	Testing i QA
+	Proves funcionals i usuaris
+	1 setmana
+	QA Tester
+	Llançament
+	Deploy i difusió inicial
+	1 setmana
+	Marketing / PM
+	________________
+
+
+2. Disseny
+2.1 Disseny UX
+      * Flux simple basat en mapa amb punts interactius.
+
+      * Alertes visuals i sonores per proximitat.
+
+      * Control bàsic d’àudio i navegació clara.
+
+      * Dashboard admin per gestió de continguts.
+
+      * Wireframes bàsics: mapa + llista punts + info punt + reproductor àudio + menú navegació.
+
+2.2 Disseny UI
+         * Paleta de colors inspirada en tons naturals del Pallars (verd, marró, blau cel).
+
+         * Tipografies llegibles i amigables.
+
+         * Iconografia clara i minimalista per punts i controls.
+
+         * Guia d’estil que garanteixi coherència visual.
+
+________________
+
+
+3. Desenvolupament
+3.1 Arquitectura de l’App
+            * Frontend: v0.dev per facilitar desenvolupament ràpid i personalitzacions.
+
+            * Base de dades: Supabase (PostgreSQL + Storage + Auth opcional).
+
+            * Mapa: OpenStreetMap amb Leaflet.js integrat.
+
+            * Àudio i multimèdia emmagatzemats a Supabase Storage.
+
+            * Pagaments: Stripe integrat via API client-side.
+
+3.2 Implementació de Funcionalitats
+               * Visualització i interacció mapa amb punts i detecció de proximitat.
+
+               * Reproducció d’àudio amb controls senzills.
+
+               * Dashboard admin per afegir/editar punts, pujar àudios, imatges i vídeos.
+
+               * Procés de pagament simple i segur.
+
+               * Geolocalització nativa del navegador per alertes.
+
+3.3 Testing i Control de Qualitat
+                  * Proves unitàries de components clau (mapa, àudio, pagament).
+
+                  * Proves d’integració i UX amb usuaris pilot.
+
+                  * Debugging i optimització de consum dades i bateria.
+
+                  * Validació de seguretat en pagaments.
+
+________________
+
+
+4. Estratègia de Llançament i Màrqueting
+4.1 Identitat de Marca
+                     * Nom: “Llegendes del Pallars”
+
+                     * Logo: icona estilitzada d’un element natural o símbol local.
+
+                     * Colors i tipografies naturals i càlids.
+
+                     * To de veu proper i narratiu.
+
+4.2 Pla de Comunicació i Promoció
+                        * Lançament a xarxes socials locals (Instagram, Facebook, Twitter).
+
+                        * Col·laboracions amb oficines de turisme i entitats culturals.
+
+                        * Continguts de blog i vídeos que expliquin llegendes i funcionament app.
+
+                        * Campanyes locals i online.
+
+4.3 Estratègia de Monetització
+                           * Contingut bàsic gratuït.
+
+                           * Accés a rutes o llegendes especials via compra puntual o subscripció.
+
+                           * Possibilitat futura d’ampliar amb productes associats (merchandising, visites guiades).
+
+4.4 Aspectes Legals i de Privacitat
+                              * Compliment GDPR i lleis locals.
+
+                              * Polítiques de privacitat clares i accessibles.
+
+                              * Ús responsable de dades de geolocalització.
+
+                              * Condicions d’ús i consentiments.
+
+________________
+
+
+5. Conclusions i Pròxims Passos
+5.1 Resultats i Aprenentatges
+                                 * MVP sòlid per validar interès i funcionalitats bàsiques.
+
+                                 * Tecnologia escalable i adaptable per futurs projectes i millores.
+
+                                 * Aprenentatge sobre usabilitat i gestió de continguts.
+
+5.2 Futurs Desenvolupaments
+                                    * Versió app final amb personalització d’usuari, multilingües, i funcions socials.
+
+                                    * Millores en mode offline i recomanacions intel·ligents.
+
+                                    * Dashboard avançat amb permisos i analytics.
+
+                                    * Integracions amb altres serveis turístics.
+
+________________
+
+
+6. Annexos
+6.1 Prototips i Mockups
+                                       * Enllaços a wireframes i prototips interactius fets amb Figma (a definir).
+
+6.2 Codi Font
+                                          * Repositori GitHub privat (pendent de creació).
+
+6.3 Pla de Negoci Detallat
+                                             * Documentació financera i models de monetització (a desenvolupar).
+
+
+
+
+Perfecte, Miquel.
+Ara començarem per dues coses clau:
+________________
+
+
+1. Wireframes UX MVP bàsics
+Pantalles principals i fluxos:
+                                             * Mapa principal:
+ Mapa OSM amb punts llegendaris.
+Indicador de posició usuari i alertes de proximitat.
+Barra inferior amb botó per llista de punts i menú.
+
+                                             * Llista de punts:
+ Llista ordenada o filtrable amb nom, icona i estat (lliure / premium).
+Clic per obrir fitxa detallada.
+
+                                             * Fitxa punt:
+ Imatge + text + reproductor àudio (play/pause + barra temps).
+Vídeo opcional (botó mostrar).
+Botó compra si és contingut premium.
+
+                                             * Pantalla pagament:
+ Formulari simple de Stripe amb feedback d’èxit/error.
+Tornar a fitxa punt desbloquejat.
+
+________________
+
+
+2. Definició taules Supabase MVP
+Taula: punts_llegendaris
+                                                * id (UUID, PK)
+
+                                                * nom (text)
+
+                                                * descripcio (text)
+
+                                                * latitud (decimal)
+
+                                                * longitud (decimal)
+
+                                                * imatge_url (text)
+
+                                                * audio_url (text)
+
+                                                * video_url (text, opcional)
+
+                                                * es_premium (bool)
+
+                                                * data_actualitzacio (timestamp)
+
+Taula: usuaris (opcional per MVP si vols registre)
+                                                   * id (UUID, PK)
+
+                                                   * nom (text)
+
+                                                   * email (text)
+
+Taula: compres
+                                                      * id (UUID, PK)
+
+                                                      * usuari_id (FK a usuaris)
+
+                                                      * punt_id (FK a punts_llegendaris)
+
+                                                      * data_compra (timestamp)
+
+
+
+Prompt detallat per v0.dev — App MVP “Llegendes del Pallars” amb estil WRC
+Desenvolupa una aplicació PWA mòbil amb les següents característiques:
+1. Visualització mapa
+                                                         * Usa OpenStreetMap amb Leaflet.js per mostrar un mapa interactiu.
+
+                                                         * Marca punts llegendaris amb icones personalitzades, visibles i clares.
+
+                                                         * El mapa ha de ser net, amb estil minimalista i colors neutres, però els punts amb colors vibrants (vermell, blau, groc).
+
+                                                         * Mostra la posició de l’usuari en temps real amb un indicador destacat.
+
+2. Geolocalització i activació automàtica
+                                                            * Detecta la posició de l’usuari amb l’API del navegador.
+
+                                                            * Quan s’acosti a menys de 50 metres d’un punt, mostra una alerta visual (p. ex. barra inferior vermella amb missatge) i activa la reproducció automàtica de l’àudio corresponent.
+
+                                                            * Permet pausar o aturar la reproducció fàcilment.
+
+3. Llista de punts i fitxa detallada
+                                                               * Pantalla amb llista dels punts llegendaris, amb nom, icona i etiqueta que indica si és premium o gratuït.
+
+                                                               * En seleccionar un punt, mostra la fitxa amb:
+
+                                                                  * Imatge destacada gran (amb bordes arrodonits i efecte d’ombra)
+
+                                                                  * Títol i descripció curta amb tipografia clara i contrastada (estil WRC, modern i net)
+
+                                                                  * Reproductor d’àudio amb play/pause, barra de temps i durada.
+
+                                                                  * Vídeo opcional (botó per mostrar) integrat i responsive.
+
+                                                                  * Botó de compra visible només si és premium.
+
+4. Pagaments i desbloqueig
+                                                                     * Integra Stripe per permetre la compra del contingut premium.
+
+                                                                     * Gestió local de l’estat per mostrar contingut premium desbloquejat sense backend propi.
+
+                                                                     * Feedback visual clar després de la compra (missatge d’èxit).
+
+5. Backend i base de dades
+                                                                        * Usa Supabase per:
+
+                                                                           * Emmagatzemar i recuperar la llista de punts i metadades (coordenades, textos, URLs de multimèdia).
+
+                                                                           * Emmagatzematge d’àudios, imatges i vídeos.
+
+                                                                              * Optimitza les peticions i cacheja dades per millorar rendiment.
+
+6. Disseny i UX
+                                                                                 * Disseny responsive i accessible.
+
+                                                                                 * Paleta de colors: fons foscos, blancs nets per textos i detalls en colors vibrants WRC (vermell intens, blau elèctric, groc).
+
+                                                                                 * Fonts modernes, sans serif, mida llegible i espaiat generós.
+
+                                                                                 * Transicions suaus entre pantalles.
+
+Proporciona un esquema modular amb components React o equivalents, el codi principal, i indicacions clares per integrar Supabase i Stripe.

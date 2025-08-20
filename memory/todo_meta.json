@@ -1,0 +1,41 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "Desenvolupar codi backend complet amb instruccions de desplegament",
+        "details": "1. Crear esquemes SQL per PostgreSQL\n2. Configurar Supabase amb policies i storage\n3. Crear APIs REST i Edge Functions\n4. Documentar configuració i desplegament\n5. Instruccions per AWS/GCP/Azure",
+        "status": "in_progress",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "Desenvolupar aplicació mòbil React Native amb Expo - Codi complet",
+        "details": "1. Estructura completa del projecte\n2. Totes les pantalles i navegació\n3. Integració Google Maps i geolocalització\n4. Reproductor àudio amb Expo Audio\n5. Autenticació i gestió d'estat\n6. Persistència local i offline\n7. Sistema gamificació i compartició\n8. Instruccions build i store deployment",
+        "status": "in_progress",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "Desenvolupar web administració Next.js - Codi complet",
+        "details": "1. Dashboard i autenticació admin\n2. CRUD complet per llegendes\n3. Gestió usuaris i estadístiques\n4. Upload multimèdia i mapes\n5. Sistema publicació continguts\n6. Instruccions desplegament Vercel/Netlify",
+        "status": "in_progress",
+        "priority": "medium"
+      },
+      "4": {
+        "id": "4",
+        "content": "Configurar integracions i APIs externes",
+        "details": "1. Configurar Google Maps API per app mòbil i web admin\n2. Configurar autenticació Google/Firebase\n3. Integrar sistema d'analítiques si requerit\n4. Configurar notificacions push (opcionals)\n5. Preparar configuració per desplegament app stores",
+        "status": "pending",
+        "priority": "medium"
+      },
+      "5": {
+        "id": "5",
+        "content": "Documentació i aspectes legals",
+        "details": "1. Crear documentació tècnica del projecte\n2. Redactar polítiques de privacitat i termes d'ús\n3. Implementar consentiments GDPR\n4. Crear guies d'usuari per app i web admin\n5. Preparar instruccions de desplegament",
+        "status": "pending",
+        "priority": "low"
+      }
+    }
+  }
+}

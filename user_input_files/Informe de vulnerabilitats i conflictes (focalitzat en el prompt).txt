@@ -1,0 +1,141 @@
+﻿Informe de vulnerabilitats i conflictes (focalitzat en el prompt)
+1. Dependències Web no necessàries
+* Situació actual:
+ El projecte existent conté dependències pròpies de la plataforma web (react-dom, react-native-web, @expo/metro-runtime).
+Aquestes generen conflictes en execució mòbil i obliguen a versions que no sempre són compatibles amb SDKs recents.
+
+* Risc:
+
+   * Major pes del bundle.
+
+   * Possibles errors de Metro bundler quan s’executa només en Android/iOS.
+
+   * Instal·lació forçada de versions no suportades per React Native.
+
+      * Solució al prompt:
+ El nou projecte exclourà "web" de platforms i no instal·larà cap dependència web.
+
+________________
+
+
+2. Conflictes de versions React / React Native
+         * Situació actual:
+
+            * Versions desalineades entre React, React Native i Expo SDK.
+
+            * El teu projecte fa servir react-dom@18.2.0 i altres dependències que no quadren amb React 19 i RN 0.79.x (que són el core de SDK 53).
+
+               * Risc:
+
+                  * Errors en temps de compilació (Invariant Violation, React is not defined, etc.).
+
+                  * Llibreries Expo poden fallar per canvis en l’API interna de React.
+
+                     * Solució al prompt:
+ npx create-expo-app amb SDK 53 estableix versions exactes compatibles i el prompt fixa aquestes versions sense rangs (^ o ~).
+
+________________
+
+
+3. Manca de bloqueig de versions
+                        * Situació actual:
+
+                           * package.json actual conté rangs de versió (^, ~), permetent instal·lar versions més noves no testejades.
+
+                              * Risc:
+
+                                 * Actualitzacions involuntàries trenquen funcionalitats.
+
+                                 * Dificultat per reproduir errors.
+
+                                    * Solució al prompt:
+ El package.json final mostrarà versions exactes (pinned), i l’instal·lació serà controlada.
+
+________________
+
+
+4. Paquets obsolets o substituïts
+                                       * Situació actual:
+
+                                          * Ús de expo-av amb parts d’API ja marcades com obsoletes.
+
+                                          * Possible ús de llibreries no mantenides per a mapes o navegació.
+
+                                             * Risc:
+
+                                                * APIs no funcionals en futurs SDKs.
+
+                                                * Codi mort augmentant la mida de l’APK/IPA.
+
+                                                   * Solució al prompt:
+ Es substitueix expo-av per expo-audio i expo-video si cal, i es força l’ús de react-native-maps i expo-location mantenides oficialment.
+
+________________
+
+
+5. Configuració app.json incompleta
+                                                      * Situació actual:
+
+                                                         * Configuració de platforms inclou web.
+
+                                                         * No totes les claus (com permisos d’ubicació) estan definides explícitament.
+
+                                                            * Risc:
+
+                                                               * Errors en permisos a iOS.
+
+                                                               * Warnings en build d’Android.
+
+                                                                  * Solució al prompt:
+ app.json amb platforms: ["ios", "android"] i configuració mínima de permisos per SDK 53.
+
+________________
+
+
+6. Absència de separació d’entorns
+                                                                     * Situació actual:
+
+                                                                        * .env possiblement barrejat amb codi font.
+
+                                                                        * Claus exposades en repositori.
+
+                                                                           * Risc:
+
+                                                                              * Exposició de credencials (Supabase, Google Maps).
+
+                                                                              * Breaches de seguretat.
+
+                                                                                 * Solució al prompt:
+ .gitignore amb .env, .env.sample per valors d’exemple i lectura via expo-constants o process.env.
+
+________________
+
+
+7. Scripts npm inadequats
+                                                                                    * Situació actual:
+
+                                                                                       * Presència de npm run web i altres scripts no utilitzats.
+
+                                                                                          * Risc:
+
+                                                                                             * Confusió en l’equip.
+
+                                                                                             * Execució accidental de mode web no suportat.
+
+                                                                                                * Solució al prompt:
+ Scripts reduïts a start, android, ios sense cap mode web.
+
+________________
+
+
+Conclusió i justificació
+El prompt proposat crea un entorn net, actualitzat i focalitzat en mòbil:
+                                                                                                   * Evita dependències web i conflictes de versions.
+
+                                                                                                   * Assegura compatibilitat total amb Expo SDK 53, React 19 i React Native 0.79.x.
+
+                                                                                                   * Millora seguretat amb .env i evita exposició de claus.
+
+                                                                                                   * Redueix la mida de l’app i riscos d’errors per paquets obsolets.
+
+                                                                                                   * Estableix un punt de partida estable i replicable per futures actualitzacions.
